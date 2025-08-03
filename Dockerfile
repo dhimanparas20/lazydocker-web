@@ -23,9 +23,7 @@ FROM alpine
 ENV DIR=${DIR:-/usr/bin/}
 COPY --from=0 /ttyd/build/ttyd /usr/bin/ttyd
 COPY --from=0 $DIR/lazydocker /usr/bin/lazydocker
-RUN apk add --no-cache tini
-
-
+RUN apk add --no-cache tini curl
 
 EXPOSE 7681
 WORKDIR /root
