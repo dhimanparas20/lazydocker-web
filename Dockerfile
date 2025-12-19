@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 # NOTE: use `main` branch for latest
-ENV TTYD_GIT_REF=1.7.7
+ENV TTYD_GIT_REF=main
 
 # NOTE: use `master` branch for latest
 ENV LAZYDOCKER_GIT_REF=master
@@ -29,4 +29,4 @@ EXPOSE 7681
 WORKDIR /root
 
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["ttyd", "--writable",  "sudo" , "lazydocker"]
+CMD ["ttyd", "--writable", "lazydocker"]
