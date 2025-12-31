@@ -15,7 +15,7 @@ gui:
   returnImmediately: false
   wrapMainPanel: true
   # Side panel width as a ratio of the screen's width
-  sidePanelWidth: 0.280
+  sidePanelWidth: 0.300
   # Determines whether we show the bottom line (the one containing keybinding
   # info and the status of the app).
   showBottomLine: true
@@ -31,7 +31,7 @@ gui:
 logs:
   timestamps: true
   since: '' # set to '' to show all logs
-  tail: '5000' # set to 200 to show last 200 lines of logs
+  tail: '2000' # set to 200 to show last 200 lines of logs
 commandTemplates:
   dockerCompose: docker compose # Determines the Docker Compose command to run, referred to as .DockerCompose in commandTemplates
   restartService: '{{ .DockerCompose }} restart {{ .Service.Name }}'
