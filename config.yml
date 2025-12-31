@@ -15,23 +15,23 @@ gui:
   returnImmediately: false
   wrapMainPanel: true
   # Side panel width as a ratio of the screen's width
-  sidePanelWidth: 0.333
+  sidePanelWidth: 0.280
   # Determines whether we show the bottom line (the one containing keybinding
   # info and the status of the app).
   showBottomLine: true
   # When true, increases vertical space used by focused side panel,
   # creating an accordion effect
-  expandFocusedSidePanel: false
+  expandFocusedSidePanel: true
   # Determines which screen mode will be used on startup
   screenMode: "normal" # one of 'normal' | 'half' | 'fullscreen'
   # Determines the style of the container status and container health display in the
   # containers panel. "long": full words (default), "short": one or two characters,
   # "icon": unicode emoji.
-  containerStatusHealthStyle: "long"
+  containerStatusHealthStyle: "icon"
 logs:
-  timestamps: false
+  timestamps: true
   since: '' # set to '' to show all logs
-  tail: '200' # set to 200 to show last 200 lines of logs
+  tail: '5000' # set to 200 to show last 200 lines of logs
 commandTemplates:
   dockerCompose: docker compose # Determines the Docker Compose command to run, referred to as .DockerCompose in commandTemplates
   restartService: '{{ .DockerCompose }} restart {{ .Service.Name }}'
