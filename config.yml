@@ -15,7 +15,7 @@ gui:
   returnImmediately: false
   wrapMainPanel: true
   # Side panel width as a ratio of the screen's width
-  sidePanelWidth: 0.300
+  sidePanelWidth: 0.333
   # Determines whether we show the bottom line (the one containing keybinding
   # info and the status of the app).
   showBottomLine: true
@@ -29,7 +29,7 @@ gui:
   # "icon": unicode emoji.
   containerStatusHealthStyle: "icon"
 logs:
-  timestamps: true
+  timestamps: false
   since: '' # set to '' to show all logs
   tail: '2000' # set to 200 to show last 200 lines of logs
 commandTemplates:
