@@ -28,5 +28,8 @@ RUN apk add --no-cache tini curl
 EXPOSE 7681
 WORKDIR /root
 
+HEALTHCHECK --interval=2m --timeout=5s --start-period=10s --retries=3 \
+  CMD curl --fail --head http://localhost:7681/ || exit 1
+
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["ttyd", "--writable", "lazydocker"]
