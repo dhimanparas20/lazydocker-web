@@ -31,7 +31,7 @@ gui:
 logs:
   timestamps: false
   since: '' # set to '' to show all logs
-  tail: '1000' # set to 200 to show last 200 lines of logs
+  tail: '' # set to 200 to show last 200 lines of logs
 commandTemplates:
   dockerCompose: docker compose # Determines the Docker Compose command to run, referred to as .DockerCompose in commandTemplates
   restartService: '{{ .DockerCompose }} restart {{ .Service.Name }}'
