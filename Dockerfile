@@ -4,7 +4,7 @@ FROM ubuntu:22.04
 ENV TTYD_GIT_REF=1.7.7
 
 # NOTE: use `master` branch for latest
-ENV LAZYDOCKER_GIT_REF=master
+ENV LAZYDOCKER_GIT_REF=de40167712063b02cb74ff3c4137eaf4b421638a
 
 # NOTE: used by install_update_linux.sh to download binary (otherwise defaults to $HOME/.local/bin)
 ENV DIR=/usr/bin/
