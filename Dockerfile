@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 # NOTE: use `main` branch for latest
-ENV TTYD_GIT_REF=main
+ENV TTYD_GIT_REF=1.7.7
 
 # NOTE: use `master` branch for latest
 ENV LAZYDOCKER_GIT_REF=master
