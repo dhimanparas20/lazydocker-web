@@ -15,7 +15,7 @@ This image is meant for people who want LazyDocker available anywhere without in
 Pull the image:
 
 ```bash
-docker pull YOUR_DOCKERHUB_USER/lazydocker-web:latest
+docker pull dhimanparas20/lazydocker-web:latest
 ```
 
 Run it:
@@ -26,14 +26,14 @@ docker run -d \
   --restart unless-stopped \
   -p 7681:7681 \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  YOUR_DOCKERHUB_USER/lazydocker-web:latest
+  dhimanparas20/lazydocker-web:latest
 ```
 
 Then open:
 
 - `http://localhost:7681`
 
-Replace `YOUR_DOCKERHUB_USER/lazydocker-web:latest` with your image name (and tag) if you published it under a different repo/tag.
+Replace `dhimanparas20/lazydocker-web:latest` with your image name (and tag) if you published it under a different repo/tag.
 
 ### Change the Port
 
@@ -43,7 +43,7 @@ docker run -d \
   --restart unless-stopped \
   -p 8080:7681 \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  YOUR_DOCKERHUB_USER/lazydocker-web:latest
+  dhimanparas20/lazydocker-web:latest
 ```
 
 ## Using Your Own LazyDocker Config
@@ -61,7 +61,7 @@ docker run -d \
   -p 7681:7681 \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v ./config.yml:/root/.config/lazydocker/config.yml \
-  YOUR_DOCKERHUB_USER/lazydocker-web:latest
+  dhimanparas20/lazydocker-web:latest
 ```
 
 Tip: if your host supports it, mount it read-only by adding `:ro` at the end of the config volume.
