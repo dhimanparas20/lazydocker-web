@@ -7,5 +7,6 @@ services:
       - "7681:7681"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./config.yml:/root/.config/lazydocker/config.yml
+      # Optional: override the baked-in default config
+      # - ./config.yml:/root/.config/lazydocker/config.yml
       # - /run/user/1000/docker.sock:/var/run/docker.sock enable if running on rootless docker

@@ -43,6 +43,11 @@ RUN curl "https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scri
 EXPOSE 7681
 WORKDIR /root
 
+# Ship a default LazyDocker config in the image. Users can still override at runtime with a bind mount:
+# `-v ./config.yml:/root/.config/lazydocker/config.yml`
+RUN mkdir -p /root/.config/lazydocker
+COPY config.yml /root/.config/lazydocker/config.yml
+
 HEALTHCHECK --interval=2m --timeout=5s --start-period=10s --retries=3 \
   CMD curl --fail --head http://localhost:7681/ || exit 1
 
